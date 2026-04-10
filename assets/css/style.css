@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 body {
   font: 300 16px/1.35 "Raleway", Helvetica, sans-serif;
   color: #111;
-  background-color: #fcf8ed;
+  background-color: #e9e9e9;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -676,5 +676,134 @@ section {
 
 p span {
   display: block; }
+
+/* Floating Navbar */
+.floating-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fefefe;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-wrapper {
+  max-width: calc(1000px - (30px * 2));
+  margin: 0 auto;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  color: #1C91CD !important;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover {
+  color: #1C91CD !important;
+  border-bottom: none;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  color: #1C91CD !important;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  border-bottom: 1px dotted black;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 100px;
+}
+
+/* Hero Section - Photo Left, About Right */
+.hero-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  margin-top: 20px; 
+  align-items: flex-start;
+}
+
+.hero-left {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.hero-left img {
+  width: 180px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+}
+
+.hero-right {
+  flex: 1;
+}
+
+.hero-right p {
+  line-height: 1.6;
+}
+
+/* Full Width Section */
+.full-width-section {
+  clear: both;
+  width: 100%;
+}
+
+/* Projects Container - Side by Side */
+.projects-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.project {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .hero-left {
+    width: 100%;
+  }
+  
+  .hero-right {
+    width: 100%;
+  }
+  
+  .projects-container {
+    flex-direction: column;
+  }
+}
 
 
