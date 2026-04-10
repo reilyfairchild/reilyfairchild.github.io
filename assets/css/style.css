@@ -802,6 +802,46 @@ p span {
   border-bottom: 1px dotted black;
 }
 
+/* Mobile responsiveness for navbar */
+@media screen and (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 10px 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 18px;
+  }
+  
+  .navbar-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-links li {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .navbar-links a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-links {
+    gap: 5px;
+  }
+  
+  .navbar-links a {
+    font-size: 12px;
+  }
+  
+  .navbar-brand {
+    font-size: 16px;
+  }
+}
+
 /* Add padding to body to account for fixed navbar */
 body {
   padding-top: 100px;
