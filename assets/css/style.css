@@ -11,15 +11,33 @@ dl, dd, ol, ul, figure {
  *  * Basic styling
  *   */
 body {
-  font: 300 16px/1.35 "Raleway", Helvetica, sans-serif;
+  font: 300 16px/1.35 "Inter", sans-serif;
   color: #111;
-  background-color: #e9e9e9;
+  background-color: #F5f5f5;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700; /* boldness */
+  font-size: 1.5em;
+  color: #001242;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.75em;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
 li {
   display: inline;
@@ -666,6 +684,56 @@ div#exp-text {
 div#exp-logo {
   margin-left: 90%; }
 
+/* Experience Container - Centered with subtle border */
+.experience-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.experience-entry {
+  margin-bottom: 28px;
+}
+
+.experience-entry:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  font-size: 15px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.experience-header strong {
+  font-weight: 600;
+}
+
+.experience-dates {
+  float: right;
+  font-size: 13px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.experience-entry ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-entry li {
+  display: list-item;
+  float: none;
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
 /* Dotted underline */
 u.dotted {
   border-bottom: 1px dotted #999;
@@ -699,8 +767,8 @@ p span {
 }
 
 .navbar-brand {
-  font-size: 18px;
-  color: #1C91CD !important;
+  font-size: 20px;
+  color: #03256C !important;
   white-space: nowrap;
 }
 
@@ -725,8 +793,8 @@ p span {
 }
 
 .navbar-links a {
-  font-size: 14px;
-  color: #1C91CD !important;
+  font-size: 16px;
+  color: #013A63 !important;
   text-decoration: none;
 }
 
@@ -803,6 +871,18 @@ body {
   
   .projects-container {
     flex-direction: column;
+  }
+  
+  .experience-container {
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .experience-dates {
+    float: none;
+    display: block;
+    margin-top: 4px;
   }
 }
 
