@@ -10,11 +10,10 @@ dl, dd, ol, ul, figure {
 /**
  *  * Basic styling
  *   */
- /* Import Poppins from Google Fonts */
-@import url('https://googleapis.com');
+
 
 body {
-  font: 400 16px/1.35 "Lato", Helvetica, sans-serif;
+  font: 400 16px/1.35 "Lato", sans-serif;
   color: #111;
   background-color: #F5f5f5;
   -webkit-text-size-adjust: 100%;
