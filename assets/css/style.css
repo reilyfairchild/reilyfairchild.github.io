@@ -14,8 +14,8 @@ dl, dd, ol, ul, figure {
 
 body {
   font: 400 16px/1.35 "Lato", sans-serif;
-  color: #111;
-  background-color: #F5f5f5;
+  color: #232830;
+  background-color: #F4F5F7;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -27,7 +27,7 @@ h1 {
   font-family: "Lato", sans-serif;
   font-weight: 700; /* boldness */
   font-size: 1.5em;
-  color: #001242;
+  color: #16253C;
 }
 
 h2 {
@@ -98,12 +98,12 @@ h1 {
  *  * Links
  *   */
 a {
-  color: #1C91CD !important;
+  color: #1F6398 !important;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #174E78; }
   a:hover {
-    color: #1C91CD !important;
+    color: #174E78 !important;
     border-bottom: 1px dotted black; }
   a.page-link {
     color: #aaa !important; }
@@ -686,14 +686,23 @@ div#exp-text {
 div#exp-logo {
   margin-left: 90%; }
 
-/* Experience Container - Centered with subtle border */
+/* Experience Container - Option D: full page column, section title
+   inside the card above a hairline rule. */
 .experience-container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 30px;
-  border: 1px solid #e0e0e0;
+  max-width: 100%;
+  margin: 0 0 44px 0;
+  padding: 26px 30px 30px 30px;
+  border: 1px solid #E3E5EA;
   border-radius: 4px;
-  background-color: #fafafa;
+  background-color: #FFFFFF;
+}
+
+/* Section title is the card's own header */
+.experience-container > h2 {
+  margin: 0 0 22px 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E3E5EA;
+  font-size: 1.5em;
 }
 
 .experience-entry {
@@ -705,6 +714,10 @@ div#exp-logo {
 }
 
 .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
   font-size: 15px;
   margin-bottom: 8px;
   line-height: 1.4;
@@ -714,10 +727,37 @@ div#exp-logo {
   font-weight: 600;
 }
 
+/* Company sits on its own line under the position title */
+.experience-org {
+  font-size: 14px;
+  color: #232830;
+  margin-top: 2px;
+}
+
+/* Right column: dates, then location beneath */
+.experience-meta {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.experience-meta .experience-dates {
+  float: none;
+  display: block;
+  margin-left: 0;
+}
+
+.experience-location {
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+  color: #656C79;
+  margin-top: 2px;
+}
+
 .experience-dates {
   float: right;
   font-size: 13px;
-  color: #888;
+  color: #656C79;
   margin-left: 10px;
 }
 
@@ -733,7 +773,38 @@ div#exp-logo {
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 1.5;
+  color: #232830;
+}
+
+/* Education Entry - school first, no bullets */
+.education-entry {
+  margin-bottom: 24px;
+}
+
+.education-entry:last-child {
+  margin-bottom: 0;
+}
+
+.education-school {
+  display: flow-root; /* contain the floated dates */
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.education-degree {
+  font-size: 14px;
+  line-height: 1.5;
   color: #333;
+  margin-bottom: 2px;
+}
+
+.education-detail {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #656C79;
 }
 
 /* Dotted underline */
@@ -753,7 +824,7 @@ p span {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fefefe;
+  background-color: #FFFFFF;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -986,14 +1057,27 @@ body {
   
   .experience-container {
     max-width: 100%;
-    margin: 20px 0;
+    margin: 0 0 32px 0;
     padding: 20px;
   }
   
+  .experience-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .experience-meta {
+    text-align: left;
+  }
+
   .experience-dates {
     float: none;
     display: block;
     margin-top: 4px;
+  }
+
+  .education-entry .experience-dates {
+    margin-bottom: 4px;
   }
 }
 
