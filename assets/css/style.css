@@ -841,13 +841,27 @@ p span {
 
 .navbar-brand {
   font-size: 20px;
-  color: #013A63 !important;
+  color: #16253C !important;
   white-space: nowrap;
 }
 
 .navbar-brand:hover {
-  color: #1C91CD !important;
+  color: #1F6398 !important;
   border-bottom: none;
+}
+
+/* Hero: CV | LinkedIn under the email */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.hero-links-sep {
+  color: #D4D9E0;
 }
 
 .navbar-links {
@@ -867,7 +881,7 @@ p span {
 
 .navbar-links a {
   font-size: 16px;
-  color: #013A63 !important;
+  color: #16253C !important;
   text-decoration: none;
 }
 
